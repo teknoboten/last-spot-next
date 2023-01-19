@@ -15,10 +15,10 @@ export default function Home() {
 
 if (session) {
   return (
-    <>
+    <div className={styles.main}>
       Signed in as {session?.token?.email} <br />
       <button onClick={() => signOut()}>Sign out</button>
-      <hr />
+      <br />
       <button onClick={() => getMyPlaylists()}>Get all my playlists</button>
       {list.map((item) => (
         <div key={item.id}>
@@ -26,7 +26,7 @@ if (session) {
           <img src={item.images[0]?.url} width="100" />
         </div>
       ))}
-    </>
+    </div>
   );
 }
 return (

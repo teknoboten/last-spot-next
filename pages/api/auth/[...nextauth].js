@@ -20,7 +20,7 @@ export default NextAuth({
       return token;
     },
     async session(session, user) {
-      session.user = user;
+      // session.user = user;
       return session;
     },
   },
@@ -35,31 +35,3 @@ export default NextAuth({
 
 
 
-
-
-
-
-
-
-// export const authOptions = {
-//   // Configure one or more authentication providers
-//   providers: [
-//     SpotifyProvider({
-//       clientId: process.env.SPOTIFY_CLIENT_ID,
-//       clientSecret: process.env.SPOTIFY_CLIENT_SECRET
-//     }),
-//     // ...add more providers here
-//   ],
-    
-//   callbacks: {
-//     async redirect({ url, baseUrl }) {
-//       // Allows relative callback URLs
-//       if (url.startsWith("/")) return `${baseUrl}${url}`
-//       // Allows callback URLs on the same origin
-//       else if (new URL(url).origin === baseUrl) return url
-//       return baseUrl
-//     }
-//   }
-// }
-
-// export default NextAuth(authOptions)
